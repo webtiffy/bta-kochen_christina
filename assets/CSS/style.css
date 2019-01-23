@@ -1,0 +1,78 @@
+*{
+  box-sizing: border-box;
+}
+
+html{
+  width: 100%; /*Größe 100% vom Bildschirm*/
+  font-family: Helvetica, Arial, sans-serif; /*Nimm Schriftart Helvetica, wenn du das nicht hast dann Arial, sonst sans-serif - alles durch Komma getrennt und was zuerst genannt wird das wird als erstes genommen*/
+  line-height: 1.5; /*1,5 Zeilenabstand*/
+  font-size: 16px; /*Schriftgröße...kein Leerzeichen zwischen Zahl und Pixel*/
+}
+
+body{
+  background-color: #fff; /*Weißer Hintergund, vorsichtshalber..sieht später eh keinen Hintergrund*/
+  margin: 0 /*Es gibt so einen Rand zwischen Head und Body, sind 8px Voreinstellung, will ich weg haben, daher 0 eingeben, ohne px*/
+}
+
+#menu{
+  padding: 0; /*was Voreinstellung und soll weg - habe ich bei untersuchen gesehen*/
+  margin-left: 0; /*was Voreinstellung und soll weg - habe ich bei untersuchen gesehen*/
+  list-style-image: none; /*die Aufzählungspunkte, die auch voreingestellt sind, sollen weg; bei css4you unter list, habe ich Vorschläge was ich hier für Werte eingeben kann, nehme nicht 0 sondern none*/
+}
+
+#menu a{ /*Ich rede mit allen Listen in id menu; die folgenden Anweisungen kann man einfach googlen oder bei css4you finden*/
+  color: black; /*Textfarbe ist schwarz*/
+  text-decoration: none; /*Links sind nicht unterstrichen*/
+  font-weight: bold; /*Text fett schreiben*/
+  text-transform: uppercase; /*Alles in Großbuchstaben*/
+}
+
+#burger{
+  background-color: white; /*macht den Button weiß ODER background: transparent;*/
+  border: none; /*Rahmen entfernen*/
+}
+
+#navigation.show{ /*Sehe in javascript, dass eine Klasse show heißt, javascript ist in html eingebunden, daher kann ich hier nun die Klasse show ansprechen und zusätzlichspreche ich id nav an, was ich in html angelegt hatte. Spreche beides an, kein Leerzeichen verwenden*/
+  display: block;
+}
+
+#navigation{ /*Wollen Menüleiste nicht sehen, daher lassen wir es mit display none verschwinden*/
+  display: none;
+}
+
+#mast-head{ /*Legen die Höhe vom header fest, der hatte eine id bekommen*/
+  height: 60px;
+  padding-left: 1rem; /*Element vom header rückt nach links vom header-Rand weg, 1rem sind ca. 16px*/
+  padding-right: 1rem; /*Element vom header rückt nach rechts vom header-Rand weg*/
+  display: flex; /*siehe http://the-echoplex.net/flexyboxes/*/
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo{
+  height: 40px; /*Ist eigentlich schon in html definiert aber wollten das zur Übung, in diesem Fall domiert css html und 40px greifen*/
+  width: auto; /*Höhe muss man nicht geben, nur zum Spaß*/
+}
+
+#hero{
+  background-image: url(../img/intro.jpg);/*Hintergundbild, .. heißt rausgehen aus Ordner in dem ich drin bin, / heißt reingehen in einen Ordner, in css nutzt man beim Bild nicht img/source wie in html sondern url, Hintergrundbild nimmt Größe von Sektion an und Sektion ist als Standard so groß das alle Elemente reinpassen*/
+  height: 100vh; /*vh heißt viewport height - also so groß wie Bildschirm groß ist*/
+  background-repeat: no-repeat; /*Hintergundbild gibt es nur ein Mal und nicht mehrmals, wenn Bildschirm groß ist, würde ich das Bild sonst mehrmals drin haben*/
+  background-size: cover; /*Hintegrundbild füllt den gesamten Bildschirm aus*/
+  background-position: center; /*Hintergrundbild richtet sich je nach Bilschirmgröße zentral aus und füllt den Bildschirm aus (durch den Code davor)*/
+  color: white; /*Schrift in der Sektion ist weiß, außer Schrift vom Link und das ist richtig*/
+  text-align: center; /*Text steht mittig*/
+}
+
+.button{ /*Bearbeite hier den Link (habe ich in html mit class versehen), der wie ein Button aussieht*/
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: white; /*Hintergrundfarbe vom Link-Button - sodass das Ding wie ein Button aussieht*/
+  padding: 1rem; /*Mache hier nun den Hintergund dicker und versuche es mal mit 1rem*/
+  border-color: #374A67; /*Randfarbe*/
+  border-width: 1px; /*Randbreite*/
+  border-style: solid; /*Durchgezogene Linie*/
+  color: #374A67; /*Schriftfarbe Farbe wie vom Rahmen*/
+  font-weight: bold; /*Schrift fett*/
+  border-radius: 4px; /*abgerundete Ecken*/
+}

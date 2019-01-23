@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <!--Das ist ein Kommentar-->
+  <head>
+    <meta charset="utf-8">
+    <title>BTA Kochen - Wie geil ist das denn?</title>
+    <meta name="description" content="Kochen BTA - Total leckere Rezepte">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Brauchen wir für responsive Webseiten-->
+
+    <link rel="stylesheet" href="assets/css/style.css"> <!--Verlinkung zur CSS-Datei-->
+
+  </head>
+  <body>
+
+
+      <header id="mast-head"> <!--Um später mit dem header reden zu können, weisen wir eine id zu und nennen sie einfach mast-head-->
+        <a href="#">
+          <img src="assets/img/logo.png" alt="Logo Kochen 2.0" height="50" id="logo"> <!--Bild mit Alternativtext und Größenangabe, id zugewiesen-->
+        </a>
+
+        <button type="button" id="burger"> <!--Button ist Knopf auf den drücken kann, ohne das ein Linkdahinter steckt. Es macht sich die Menüleiste auf-->
+
+          <img src="assets/img/menu.svg" alt="Burger Menu" width="32" height="32"> <!--Binde hier das Icon ein, was in meinem Ordner hinterlegt ist, so sieht dann mein Button aus,gebe zudem die Höhe und Breite an-->
+        </button>
+
+        <nav id="navigation"> <!--Navigation (Menüleiste) mit id-->
+          <ul id="menu"> <!--ungeordnete Liste--> <!--Geben id damit wir mit dieser Liste in css was bestimmtes machen können-->
+
+            <li> <!--li heißt list item-->
+              <a href="#">Home</a>
+            </li>
+
+            <li>
+              <a href="#">Rezepte</a>
+            </li>
+
+            <li>
+              <a href="#">Kategorien</a>
+            </li>
+
+            <li>
+              <a href="#">Über uns</a>
+            </li>
+
+          </ul>
+        </nav>
+      </header>
+
+
+      <main id="main"> <!--Hauptteil innerhalb des bodys. Es kann nur einen Hauptteil geben.id brauchen wir eigentlich nicht da es nur einen main gibt aber wer weiß, eventuell nutzt mal jemand zwei main und daher vergeben wir eine id-->
+        <section id="hero"> <!--Vergeben eine Sektion um main zu teilen-->
+          <h1>Die besten Rezepte für Webworker</h1>
+          <p>Es gibt mehr als Pizza & Ravioli</p>
+          <a href="#" class="button"> <!--Den Link (der wie ein Button aussieht) versehe ich mit Class weil ich später noch per solcher Links (die wie ein Button aussehen) erstelle-->
+            Entdecke die Leckereien
+          </a>
+
+        </section>
+
+
+      </main>
+
+
+
+
+
+
+      <script type="text/javascript" src="assets/js/menu.js"> <!--Verknüpfen eine javascript-Datei, die in meinem Ordner bereits liegt-->
+      </script>
+
+  </body>
+</html>
