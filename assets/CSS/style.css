@@ -32,8 +32,16 @@ body{
   border: none; /*Rahmen entfernen*/
 }
 
-#navigation.show{ /*Sehe in javascript, dass eine Klasse show heißt, javascript ist in html eingebunden, daher kann ich hier nun die Klasse show ansprechen und zusätzlichspreche ich id nav an, was ich in html angelegt hatte. Spreche beides an, kein Leerzeichen verwenden*/
+#navigation.show{ /*Siehe in javascript, dass eine Klasse show heißt, javascript ist in html eingebunden, daher kann ich hier nun die Klasse show ansprechen und zusätzlichspreche ich id nav an, was ich in html angelegt hatte. Spreche beides an, kein Leerzeichen verwenden*/
   display: block;
+  position: absolute; /*Wenn sich Menüleiste öffnet, soll sie sich über die section legen*/
+  height: 100vh; /*Keine Ahnung wieso hier hv und nicht %, irgendwas mit Höhe*/
+  width: 100%;
+  background: #fff;
+  top: 60px; /*Damit es nicht ganz oben liegt und den header verdeckt*/
+  left: 0;
+  text-align: center; /*Text erscheint in der Mitte der Seite*/
+  white-space: pre-line; /*Macht Zeilenabstand größer*/
 }
 
 #navigation{ /*Wollen Menüleiste nicht sehen, daher lassen wir es mit display none verschwinden*/
@@ -47,6 +55,10 @@ body{
   display: flex; /*siehe http://the-echoplex.net/flexyboxes/*/
   justify-content: space-between;
   align-items: center;
+  position: fixed; /*Menüleiste wäre wieder ganz links, daher geben wir noch width 100 an*/
+  width: 100%; /*header zieht sich über den gesamten Bildschirm*/
+  background-color: #fff; /*Hintergund vom header weiß*/
+  top: 0; /*Da war noch eine Lücke, daher rücken wir header nach oben*/
 }
 
 #logo{
@@ -62,6 +74,10 @@ body{
   background-position: center; /*Hintergrundbild richtet sich je nach Bilschirmgröße zentral aus und füllt den Bildschirm aus (durch den Code davor)*/
   color: white; /*Schrift in der Sektion ist weiß, außer Schrift vom Link und das ist richtig*/
   text-align: center; /*Text steht mittig*/
+  display: flex; /*Haben wir in flexy box gefunden*/
+  justify-content: center;
+  align-items: center;
+
 }
 
 .button{ /*Bearbeite hier den Link (habe ich in html mit class versehen), der wie ein Button aussieht*/
