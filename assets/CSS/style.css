@@ -52,7 +52,7 @@ body{
   height: 60px;
   padding-left: 1rem; /*Element vom header rückt nach links vom header-Rand weg, 1rem sind ca. 16px*/
   padding-right: 1rem; /*Element vom header rückt nach rechts vom header-Rand weg*/
-  display: flex; /*siehe http://the-echoplex.net/flexyboxes/*/
+  display: flex; /*siehe http://the-echoplex.net/flexyboxes; display flex heißt, dass die Elemente nebeneinander sitzen/*/
   justify-content: space-between;
   align-items: center;
   position: fixed; /*Menüleiste wäre wieder ganz links, daher geben wir noch width 100 an*/
@@ -91,4 +91,49 @@ body{
   color: #374A67; /*Schriftfarbe Farbe wie vom Rahmen*/
   font-weight: bold; /*Schrift fett*/
   border-radius: 4px; /*abgerundete Ecken*/
+}
+
+.card img{ /*Rede mit dem Bild in der card*/
+  width: 100%; /*Bild nimmt nun 100% Größe der card an; wird kleiner wenn ich Fenster kleiner mache weil es in div ist und div ist immer so breit wie es geht*/
+  display: block; /*irgendwas mit 4px am Rand die weg sollen*/
+}
+
+.card{
+  box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.75); /*Box-Schatten um card legen, Werte habe ich wenn ich box shadow bei google eingebe - führt mich zu einer Webseite*/
+  margin: 1rem; /*Wollen bisschen Abstand vom Rand*/
+  text-align: center; /*Text soll mittig sein*/
+  border-radius: 10px; /*Da ein Bild drin ist kommen oben keine runden Ecken (ist bei einem Bild special)*/
+  overflow: hidden; /*Das Bild drüber streubt sich, durch diesen Befehl, ignoriere ich das Bild*/
+}
+
+.card a{ /*Ich spreche alle a's in der card an*/
+  text-decoration: none; /*Texte sind nicht mehr unterstrichen*/
+}
+
+.card h3 a{ /*Schriftfarbe vom Text h3 ist schwarz*/
+  color: black;
+}
+
+.card p a{ /*Schriftfarbe vom Text p ist grau*/
+  color: grey;
+}
+
+.button-blue{
+  background-color: #374a67;
+  color: white;
+  transition: 0.5s; /*Dimmer bzw. Übergang - kann mehrere Werte geben. Das erste duration, das andere delay*/
+  display: inline-block;
+  margin-bottom: 20px; /*margin-buttom damit ich nur vom unteren Rand unten wegrücke und nicht auch vom Text*/
+}
+
+.button-blue:hover{ /*hover bedeutet, dass sich die Farben tauschen wenn ich mit der Maus drüber fahre, muss die Farben aber auch noch dazu angeben*/
+  /*button-blue ist die zweite class, heißt eigentlich button button-blue. Übernimmt also alles was wir hier im css weiter oben schon für button definiert hatten. Hier füge ich weitere Dinge hinzu bzw. überschreibe was.*/
+  background-color: white;
+  color: #374a67;
+}
+
+@media (min-width:768px) { /*Jetzt kommt wieder das...wenn es kein Smartphone ist sondern ein größerer Bildschirm, dann....Habe hierzu in html ein div namens nebeneinander um alle vier cards gelegt und dann hier display flex angegeben*/
+  .nebeneinander{
+    display: flex;
+  }
 }
