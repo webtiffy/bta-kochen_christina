@@ -3,7 +3,7 @@
 }
 
 html{
-  width: 100%; /*Größe 100% vom Bildschirm*/
+  width: 100%; /*Größe 100% vom Bildschirm, am besten das immer nehmen, Höhe ist so hoch wie das was drin ist wenn man nichts anderes angibt*/
   font-family: Helvetica, Arial, sans-serif; /*Nimm Schriftart Helvetica, wenn du das nicht hast dann Arial, sonst sans-serif - alles durch Komma getrennt und was zuerst genannt wird das wird als erstes genommen*/
   line-height: 1.5; /*1,5 Zeilenabstand*/
   font-size: 16px; /*Schriftgröße...kein Leerzeichen zwischen Zahl und Pixel*/
@@ -136,4 +136,46 @@ body{
   .nebeneinander{
     display: flex;
   }
+}
+
+h2{
+  text-align: center; /*Text mittig*/
+}
+
+.card p{ /*Sprache mit Text in den cards und rücke den Text ein bisschen vom Rand weg*/
+  padding: 0 1rem; /*top und bottom sind 0, right und left sind 1rem - geht die Rund rum und wiederholt sich. Könnte auch alle vier padding-Seiten aufzählen*/
+}
+
+.kasten{ /*Hätte div auch nicht machen müssen und direkt widget ansprechen können*/
+  background: #04122B;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.kasten h2{
+  font-weight: normal;
+  font-size: 1rem;
+  color: white;
+}
+
+.email{
+  height: 3rem;
+  border-radius: 4px;
+  padding: 1rem;
+  border: 1px solid #04122b;
+}
+
+#footer a{
+  color: black;
+}
+
+#footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#footer-social li{
+    float: left;
 }

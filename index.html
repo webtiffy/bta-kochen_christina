@@ -8,6 +8,7 @@
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Brauchen wir für responsive Webseiten-->
 
+    <link rel="stylesheet" href="assets/fonts/icons.css"> <!--Verlinkung zu css-Datei, die links im Ordner abliegt-->
     <link rel="stylesheet" href="assets/css/style.css"> <!--Verlinkung zur CSS-Datei-->
 
   </head>
@@ -67,7 +68,7 @@
           <h2>Die neuesten Rezepte</h2>
 
 
-<div class="nebeneinander">
+          <div class="nebeneinander">
 
           <article class="card"> <!--Ist hier schöner (semantischer), hätte auch div sein können-->
             <a href="#"> <!--Verlinke das Bild, bei Bild erst a, dann img weil in ein Bild nichts rein kann-->
@@ -145,12 +146,75 @@
 
         </section>
 
-
       </main>
+
+      <aside class="widget"> <!--Inhalt, der nicht so wichtig ist. Ist auch nicht mehr im main-->
+
+        <div class="kasten">
+
+        <h2>Kein Rezept mehr verpassen <br>Trage dich für unseren Newsletter ein</h2>
+
+        <form class="newsletter" action="" method="post"> <!--Erstelle Formular für Newsletteranmeldung-->
+
+          <input type="email" name="email" value="" placeholder="Deine Emailadresse" class="email"> <!--Was darf in das Formular rein, zudem Texthalter wenn noch keine Mailadresse im Feld steht, geht weg wenn ich anfange eine Mailadresse reinzuschreiben, in value steht was vordefiniertes drin...zB mmax.mustermann@gmx.de aber das brauchen wir nicht-->
+          <input type="submit" name="submit" value="Abonnieren" class="button"> <!--Der Knopf ums wegzuschicken, vergebe class button weil ich weiter oben schon class button haben und will, dass dieser Knopf genau wie der Button in css gestylt ist-->
+
+        </form>
+
+        </div>
+
+      </aside>
 
 
       <script type="text/javascript" src="assets/js/menu.js"> <!--Verknüpfen eine javascript-Datei, die in meinem Ordner bereits liegt-->
       </script>
 
+      <footer id="footer">
+
+        <nav id="footer-nav">
+
+          <ul>
+
+            <li>
+              <a href="#">Impressum</a>
+            </li>
+
+            <li>
+            <a href="#">Datenschutz</a>
+            </li>
+
+            <li>
+            <a href="#">Kontakt</a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+        <nav id="footer-social">
+
+          <ul>
+            <li class="icon-facebook"> <!--Sowas wird im Internet kostenfrei schon vorgefertigt-->
+              <a href="https://www.facebook.com/" target="_blank">
+              </a>
+            </li>
+
+            <li class="icon-instagram">
+              <a href="https://www.instagram.com/" target="_blank">
+              </a>
+            </li>
+
+            <li class="icon-youtube">
+              <a href="https://www.youtube.com/" target="_blank">
+              </a>
+            </li>
+
+          </ul>
+
+        </nav>
+
+      </footer>
+
   </body>
+
 </html>
